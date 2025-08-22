@@ -29,7 +29,7 @@ fn project_point(point: [f32; 3], fov_deg: f32, aspect_ratio: f32, near: f32, fa
 
     let x_proj = f / aspect_ratio * x;
     let y_proj = f * y;
-    let z_proj = (far + near) / (near - far) * z + (2.0 * far * near) / (near - far);
+    let _z_proj = (far + near) / (near - far) * z + (2.0 * far * near) / (near - far);
     let w_proj = z;
 
     // Normalize screen coordinates
@@ -98,7 +98,7 @@ fn draw_cube2d(cube: &[[f32; 2]; 8]) {
 #[macroquad::main("SpinningCube")]
 async fn main() {
 
-    let cam: [f32; 3] = [0.0, 0.0, 0.0];
+    let _cam: [f32; 3] = [0.0, 0.0, 0.0];
     let fov: f32 = 120.0;
 
      // [x; y; z]
